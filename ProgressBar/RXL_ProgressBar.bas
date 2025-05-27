@@ -1,26 +1,27 @@
 Attribute VB_Name = "RXL_ProgressBar"
 '##################################################################################################
-' Excel StatusBar Progress Bar
+' Excel Status Bar Progress Bar
 '   RS 21-Feb-2025, v2.0
 '   Copyright (c) 2025, RXL Development. All rights reserved.
 '
 ' Developed by RXL Development, Chelmsford, UK
 '   Author: Robert Silk  [ https://excel-bits.net ]
 '
-' This module can be used to display a progress bar in the Excel StatusBar in order to provide
+' This module can be used to display a progress bar in the Excel Status Bar in order to provide
 ' visual feedback to the user while a macro is running.
-' The overhead requried for placing the progress bar in the StatusBar as a constructed string is
+' The overhead required for placing the progress bar in the StatusBar as a constructed string is
 ' less than using a UserForm. In addition, it is easier and quicker to update the string displayed
-' in the StatusBar rather than updating and repainting controls within a UserForm.
+' in the Status Bar rather than updating and repainting controls within a UserForm.
 '
 ' This module should be included as found below within the VBA Project in which it is intended to
 ' be used. The Public sub routine declarations allow for the code to be called from other processes
-' within the same Project as needed. Alternatively, the functions below can be copeied into a
-' different module where they are needed and called directly. This will require the Global
-' module-level variables and constants to be included within the module in question and we would
-' then recommend updating the sub routine declarations to Private.
+' within the same Project as needed -> e.g. RXL_ProgressBar.InitialiseProgressBar()
+' Alternatively, the functions below can be copied into a different module where they are needed
+' and called directly. This will require the Global module-level variables and constants to be
+' included within the module in question and we would then recommend updating the sub routine
+' declarations to Private.
 ' Where possible any hardcoded values which a user might want to change are included within this
-' module as constants an shoudl be changed here if needed all though we would advise against it.
+' module as constants and should be changed here if needed although we would advise against it.
 '
 ' Sub-Routines:
 ' -------------
@@ -28,23 +29,24 @@ Attribute VB_Name = "RXL_ProgressBar"
 '       Purpose:    sets the required persistent global variables for the progress bar string
 '                   creation, and displays the initial progress bar with a 0% value and optional
 '                   message string
-'       Parameters: pStrMessage [optional] => string which will be displayed to the right of the
+'       Parameters: pStrMessage [optional] -> string which will be displayed to the right of the
 '                                             progress bar
 '   UpdateProgressBar()
 '       Purpose:    creates the updated progress bar string +/- an optional message, and displays
 '                   this within the Excel StatusBar
-'       Parameters: pDblProgress => the progress value to drive the progress bar; expected to be
-'                                   between 0.00 and 1.00, i.e. decimalised % (0.10 = 10%)
-'                   pStrMessage [optional] => string which will be displayed to the right of the
+'       Parameters: pDblProgress           -> the progress value to drive the progress bar;
+'                                             expected to be between 0.00 and 1.00,
+'                                             i.e. decimalised % (0.10 = 10%)
+'                   pStrMessage [optional] -> string which will be displayed to the right of the
 '                                             progress bar
 '   CloseProgressBar()
-'       Purpose:    returns the StatusBar status to the option used before InitialiseProgressBar()
-'                   and releases the StatusBar back to Excel
+'       Purpose:    returns the Status Bar status to the option used before InitialiseProgressBar()
+'                   and releases the Status Bar back to Excel
 '       Parameters: (none)
 '
 '
 ' Code commenting has been used where possible to aid any reader/user in understanding the below
-' code and it's intended function. Whilst care has been taken in the development of these tools
+' code and its intended function. Whilst care has been taken in the development of these tools
 ' and the VBA code within this Project, for the specific purpose for which it has been designed,
 ' each user is advised to carry out their own diligence and checks, and should consider the need
 ' for independent testing before including it within any Project of their own.
