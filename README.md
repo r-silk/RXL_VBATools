@@ -9,7 +9,8 @@ If you wish to use the VBA code within your own Excel projects, there are two ma
    * Open the Excel VB Editor and find the required VBA module or UserForm in the Project Explorer window
    * Right-click on the required module(s)/UserForm(s), select "Export File..." and save the VBA code file(s) to an appropriate location, such as your local Downloads folder or Desktop
    * Find your Excel project in the VB Editor Explorer Window, right-click on the project name, and select "Import File..."
-   * Goto to the folder where you saved the VBA code file(s), select the required file(s), and click "Open" 
+   * Goto to the folder where you saved the VBA code file(s), select the required file(s), and click "Open"\
+
 2. Import the VBA code files directly
    * Download the required VBA code file(s) from the repository and save the VBA code file(s) to an appropriate location, such as your local Downloads folder or Desktop
    * With your Excel project open, open the Excel VB Editor
