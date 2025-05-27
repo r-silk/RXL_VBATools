@@ -17,6 +17,7 @@ If you wish to use the VBA code within your own Excel projects, there are two ma
    * Right-click on the name of your Excel project in the VB Editor Explorer Window and select "Import File..."
    * Goto to the folder where you saved the VBA code file(s), select the required file(s), and click "Open"
 
+
 R Silk\
 RXL Development, Chelmsford, UK\
 https://excel-bits.net
